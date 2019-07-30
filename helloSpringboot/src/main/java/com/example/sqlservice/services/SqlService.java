@@ -10,10 +10,10 @@ public class SqlService  implements UsersMapper{
     @Autowired
     private UsersMapper userMapper;
 
-    @Override
-    public int deleteByPrimaryKey(String id) {
-        return 0;
-    }
+//    @Override
+//    public int deleteByPrimaryKey(String id) {
+//        return 0;
+//    }
 
     @Override
     public int insert(Users record) {
@@ -25,18 +25,18 @@ public class SqlService  implements UsersMapper{
         return 0;
     }
 
-    @Override
-    public Users selectByPrimaryKey(String id) {
-        return null;
-    }
-
-    @Override
-    public int updateByPrimaryKeySelective(Users record) {
-        return 0;
-    }
-
-    @Override
-    public int updateByPrimaryKey(Users record) {
-        return 0;
-    }
+//    @Override
+//    public Users selectByPrimaryKey(String id) {
+//        return null;
+//    }
+//
+//    @Override
+//    public int updateByPrimaryKeySelective(Users record) {
+//        return 0;
+//    }
+//
+//    @Override
+//    public int updateByPrimaryKey(Users record) {
+//        return 0;
+//    }
 }
