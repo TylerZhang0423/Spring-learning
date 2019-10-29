@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.3.9
+Built-By: tyler
+Build-Jdk: 12.0.1
+Implementation-Title: ecommerce
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.ecommerceproject
+Implementation-URL: http://www.example.com
+
