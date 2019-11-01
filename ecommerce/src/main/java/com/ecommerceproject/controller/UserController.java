@@ -14,13 +14,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.security.MessageDigest;
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
+import java.util.Base64.Encoder;
 
 @Controller("user")
 @RequestMapping("/user")
-@CrossOrigin
+@CrossOrigin(allowCredentials = "true", allowedHeaders = "*")
 public class UserController extends BaseController{
 
     @Autowired
@@ -52,11 +55,19 @@ public class UserController extends BaseController{
         userModel.setGender(gender);
         userModel.setTelephone(telephone);
         userModel.setRegisterMode("byphone");
-        userModel.setEncrptPassword(MD5Encoder.encode(password.getBytes()));
+        userModel.setEncrptPassword(this.EncodeByMd5(password));
 
 
         userService.register(userModel);
         return CommonReturnType.create(null);
+    }
+
+
+    public String EncodeByMd5(String str) {
+
+        Encoder encoder = Base64.getEncoder();
+        String newstr = encoder.encodeToString(str.getBytes());
+        return newstr;
     }
 
 
