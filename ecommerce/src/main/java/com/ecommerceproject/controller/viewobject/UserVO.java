@@ -3,7 +3,7 @@ package com.ecommerceproject.controller.viewobject;
 public class UserVO {
     private Integer id;
     private String name;
-    private Byte gender;
+    private String gender;
     private Integer age;
     private String telephone;
 
@@ -23,11 +23,11 @@ public class UserVO {
         this.name = name;
     }
 
-    public Byte getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Byte gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 

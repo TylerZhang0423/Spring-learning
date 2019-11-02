@@ -3,7 +3,7 @@ package com.ecommerceproject.service.model;
 public class UserModel {
     private Integer id;
     private String name;
-    private Byte gender;
+    private String gender;
     private Integer age;
     private String telephone;
     private String registerMode;
@@ -26,11 +26,11 @@ public class UserModel {
         this.name = name;
     }
 
-    public Byte getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Byte gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
