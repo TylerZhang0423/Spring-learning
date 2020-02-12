@@ -2,107 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9f05d5b-c81f-42bc-a45e-0af297a0793d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../JSONProject/src/main/java/JSON/JSONObjectExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/bin/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/bin/com/spring/Helloworld/HelloWorld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/bin/com/spring/test/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/spring/commons-collections-3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/spring/commons-logging.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/spring/spring-aop-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/spring/spring-beans-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/spring/spring-context-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/spring/spring-core-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/spring/spring-expression-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/src/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/src/com/spring/Helloworld/HelloWorld.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring01/src/com/spring/test/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/.idea/libraries/spring.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/Spring02.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/out/production/Spring02/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/out/production/Spring02/com/spring/people/People.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/out/production/Spring02/com/spring/test/MainTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/spring/commons-collections-3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/spring/commons-logging.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/spring/spring-aop-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/spring/spring-beans-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/spring/spring-context-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/spring/spring-core-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/spring/spring-expression-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/src/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/src/com/spring/people/People.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring02/src/com/spring/test/MainTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/.idea/libraries/commons_collections_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/.idea/libraries/commons_logging.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/.idea/libraries/hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/.idea/libraries/hamcrest_library_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/.idea/libraries/junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/.idea/libraries/spring_aop_4_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/.idea/libraries/spring_beans_4_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/.idea/libraries/spring_context_4_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/.idea/libraries/spring_core_4_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/.idea/libraries/spring_expression_4_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/Spring03.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/junit/hamcrest-core-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/junit/hamcrest-library-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/junit/junit-4.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/out/production/Spring03/bean.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/out/production/Spring03/com/spring/entity/Dog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/out/production/Spring03/com/spring/entity/People.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/out/test/Spring03/com/spring/entity/PeopleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/spring/commons-collections-3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/spring/commons-logging.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/spring/spring-aop-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/spring/spring-beans-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/spring/spring-context-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/spring/spring-core-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/spring/spring-expression-4.0.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/src/bean.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/src/com/spring/entity/Dog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/src/com/spring/entity/People.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring03/test/com/spring/entity/PeopleTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce/src/main/java/com/ecommerceproject/dao/ItemStockDOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce/src/main/java/com/ecommerceproject/dao/ItemStockDOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce/src/main/java/com/ecommerceproject/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce/src/main/java/com/ecommerceproject/service/ItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce/src/main/java/com/ecommerceproject/service/model/ItemModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce/src/main/java/com/ecommerceproject/service/model/ItemModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce/src/main/resources/mapping/ItemDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce/src/main/resources/mapping/ItemDOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce/src/main/resources/mapping/ItemStockDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce/src/main/resources/mapping/ItemStockDOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce/target/classes/META-INF/ecommerce.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce/target/classes/com/ecommerceproject/dao/ItemStockDOMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce/target/classes/com/ecommerceproject/dao/ItemStockDOMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce/target/classes/com/ecommerceproject/service/ItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce/target/classes/com/ecommerceproject/service/ItemService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce/target/classes/com/ecommerceproject/service/model/ItemModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce/target/classes/com/ecommerceproject/service/model/ItemModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce/target/classes/mapping/ItemDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce/target/classes/mapping/ItemDOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce/target/classes/mapping/ItemStockDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce/target/classes/mapping/ItemStockDOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/src/main/java/com/example/sqlservice/SqlserviceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/src/main/java/com/example/sqlservice/controller/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/src/main/java/com/example/sqlservice/dao/UsersMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/src/main/java/com/example/sqlservice/entity/Users.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/src/main/java/com/example/sqlservice/services/SqlService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/src/main/resources/generator.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/src/main/resources/generatorConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/src/main/resources/sqlmap/UsersMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloSpringboot/src/test/java/com/example/sqlservice/SqlserviceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my-springboot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-springboot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../my-springboot/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-springboot/src/test/java/com/example/demo/MySpringbootApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../my-springboot/src/test/java/com/example/demo/MySpringbootApplicationTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,40 +15,109 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tyler/project/HairInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tyler/project/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/tyler/project/type.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tyler/project/HairFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MavenRunner">
-    <option name="vmOptions" value="-DarchetypeCatalog=local" />
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/src/com/tyler/project/HairInterface.java" />
+        <option value="$PROJECT_DIR$/src/com/tyler/project/LeftHair.java" />
+        <option value="$PROJECT_DIR$/src/com/tyler/project/RightHair.java" />
+        <option value="$PROJECT_DIR$/src/com/tyler/project/type.properties" />
+        <option value="$PROJECT_DIR$/src/com/tyler/project/PropertiesReader.java" />
+        <option value="$PROJECT_DIR$/src/com/tyler/project/Test.java" />
+        <option value="$PROJECT_DIR$/src/com/tyler/project/HairFactory.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="vmOptions" value="-DarchetypeCatalog=local" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="FactoryMode" type="b2602c69:ProjectViewProjectNode" />
               <item name="FactoryMode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FactoryMode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FactoryMode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FactoryMode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FactoryMode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -154,10 +126,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -170,6 +143,26 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tyler.project.Test" />
+      <module name="FactoryMode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tyler.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -186,33 +179,103 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/FactoryMode.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tyler/project/RightHair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding>
+            <element signature="e#184#185#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tyler/project/LeftHair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="46" />
+          <folding>
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tyler/project/HairInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tyler/project/PropertiesReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tyler/project/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tyler/project/HairFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tyler/project/type.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

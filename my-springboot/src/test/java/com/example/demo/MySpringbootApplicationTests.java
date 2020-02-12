@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.util.Assert;
@@ -86,9 +88,33 @@ class MySpringbootApplicationTests {
 		 */
 		UserModel ayUser = new UserModel();
 		ayUser.setId("3");
-		ayUser.setName("阿华");
+		ayUser.setName("小明");
 		ayUser.setPassword("123");
 		userService.save(ayUser);
+	}
+
+	@Resource
+	private RedisTemplate redisTemplate;
+
+	@Resource
+	private StringRedisTemplate stringRedisTemplate;
+
+	@Test
+	public void redisTest(){
+		
+		//添加数据
+		redisTemplate.opsForValue().set("name", "tyler");
+		String name = (String)redisTemplate.opsForValue().get("name");
+		System.out.println(name);
+
+		redisTemplate.opsForValue().set("name", "al");
+
+		name = stringRedisTemplate.opsForValue().get("name");
+		System.out.println(name);
+
+		redisTemplate.delete("name");
+		name = stringRedisTemplate.opsForValue().get("name");
+		System.out.println(name);
 	}
 
 }
