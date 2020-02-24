@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <a href="#" onclick="get1()">发生get1请求</a>
+
+    <script>
+        function get1(){
+            $.getJSON("http://localhost:8080/test/get1").then(
+                function(result){
+                    console.log(result);
+            });
+        }
+    </script>
+</head>>
+</html>>

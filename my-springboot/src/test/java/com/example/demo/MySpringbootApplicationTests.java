@@ -103,7 +103,7 @@ class MySpringbootApplicationTests {
 	public void redisTest(){
 		
 		//添加数据
-		redisTemplate.opsForValue().set("name", "tyler");
+		redisTemplate.opsForValue().set("name", "tyle");
 		String name = (String)redisTemplate.opsForValue().get("name");
 		System.out.println(name);
 
