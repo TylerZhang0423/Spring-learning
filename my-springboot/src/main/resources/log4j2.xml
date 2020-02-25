@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status= "WARN">
+    <appenders>
+
+    </appenders>
+    <loggers>
+        <root level="all" >
+
+        </root>
+    </loggers>
+</Configuration>

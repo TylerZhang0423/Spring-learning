@@ -4,10 +4,11 @@ package com.example.demo.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "user_model") //Table注释用于声明映射的数据表的名称，如果不添加，就使用默认值
-public class UserModel {
+public class UserModel implements Serializable {
 
     @Id
     private String id;

@@ -117,4 +117,26 @@ class MySpringbootApplicationTests {
 		System.out.println(name);
 	}
 
+
+	@Test
+	public void testFindById() {
+		Long redisUserSize = 0L;
+		//查询id = 1 的数据，该数据存在于redis缓存中
+		UserModel userModel = userService.findById("1");
+		redisUserSize = redisTemplate.opsForList().size("ALL_USER_LIST");
+		System.out.println("目前缓存中的用户数量为：" + redisUserSize);
+		System.out.println("--->>> id: " + userModel.getId() + " name:" + userModel.getName());
+		//查询id = 2 的数据，该数据存在于redis缓存中
+		UserModel userModel1 = userService.findById("2");
+		redisUserSize = redisTemplate.opsForList().size("ALL_USER_LIST");
+		System.out.println("目前缓存中的用户数量为：" + redisUserSize);
+		System.out.println("--->>> id: " + userModel1.getId() + " name:" + userModel1.getName());
+		//查询id = 4 的数据，该数据不存在于redis缓存中，存在于数据库中
+		UserModel userModel2 = userService.findById("3");
+		System.out.println("--->>> id: " + userModel2.getId() + " name:" + userModel2.getName());
+		redisUserSize = redisTemplate.opsForList().size("ALL_USER_LIST");
+		System.out.println("目前缓存中的用户数量为：" + redisUserSize);
+
+	}
+
 }
