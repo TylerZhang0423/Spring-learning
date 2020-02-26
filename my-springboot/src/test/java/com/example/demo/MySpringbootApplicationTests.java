@@ -2,6 +2,8 @@ package com.example.demo;
 
 import com.example.demo.model.UserModel;
 import com.example.demo.service.UserService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
@@ -11,6 +13,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.util.Assert;
+
 
 import javax.annotation.Resource;
 import java.sql.ResultSet;
@@ -138,5 +141,17 @@ class MySpringbootApplicationTests {
 		System.out.println("目前缓存中的用户数量为：" + redisUserSize);
 
 	}
+
+
+	Logger logger = LogManager.getLogger(this.getClass());
+
+	@Test
+	public void testLog4j() {
+		//测试的时候记得查看表中是否有id=4的数据
+		userService.delete("4");
+		logger.info("delete success!!!");
+	}
+
+
 
 }
