@@ -49,33 +49,6 @@
 			});
 		});
 
-
-		// 测试方法
-			it("jsonp请求", function(done) {
-				// 服务器返回的结果
-				var result;
-
-				$.ajax({
-					url: base +"/get1",
-					dataType: "jsonp",
-					jsonp: "callback2",
-					cache:true,
-					success: function(json){
-						result = json;
-					}
-				});
-
-				// 由于是异步请求，需要使用setTimeout来校验
-				setTimeout(function() {
-					expect(result).toEqual({
-						"data" : "get1 ok"
-					});
-
-					// 校验完成，通知jasmine框架
-					done();
-				}, 100);
-			});
-
 		</script>
     </body>
 </html>
