@@ -12,6 +12,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.Assert;
 
 
@@ -20,6 +21,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 @SpringBootTest
 class MySpringbootApplicationTests {
@@ -152,6 +155,12 @@ class MySpringbootApplicationTests {
 		logger.info("delete success!!!");
 	}
 
+
+	@Test
+	public void testMybatis() {
+		UserModel userModel = userService.findByNameAndPassword("tyler", "123456");
+		logger.info(userModel.getId()+userModel.getName());
+	}
 
 
 }

@@ -1,5 +1,6 @@
 package com.example.demo.service.impl;
 
+import com.example.demo.dao.UserDao;
 import com.example.demo.model.UserModel;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.service.UserService;
@@ -91,4 +92,14 @@ public class UserServiceImpl implements UserService {
     public List<UserModel> findByIdIn(Collection<String> ids) {
         return userRepository.findByIdIn(ids);
     }
+
+
+    @Resource
+    private UserDao userDao;
+
+    @Override
+    public UserModel findByNameAndPassword(String name , String password) {
+        return userDao.findByNameAndPassword(name, password);
+    }
+
 }

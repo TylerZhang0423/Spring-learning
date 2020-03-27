@@ -22,4 +22,6 @@ public interface UserService {
     List<UserModel> findByNameLike (String name);
     List<UserModel> findByIdIn (Collection<String> ids);
 
+    UserModel findByNameAndPassword(String name , String password);
+
 }
