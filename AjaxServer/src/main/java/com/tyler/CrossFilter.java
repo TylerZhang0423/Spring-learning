@@ -24,6 +24,7 @@ public class CrossFilter implements javax.servlet.Filter {
         HttpServletResponse res = (HttpServletResponse) servletResponse;
         res.addHeader("Access-Control-Allow-Origin", "http://localhost:8081");
         res.addHeader("Access-Control-Allow-Methods", "GET");
+        res.addHeader("Access-Control-Allow-Headers","Content-Type");
 
         filterChain.doFilter(servletRequest, servletResponse);
     }

@@ -311,11 +311,31 @@ NGINX就是静态服务器，浏览器的请求先经过静态服务器，然后
     }
 ```
 
-简单请求：GET、HEAD、POST。请求的header里面没有自定义头，Content-Type分为以下几种：text/plain
+## 3 简单请求与非简单请求
 
-​				multipart/form-data   application/x-www-form-urlencoded
+简单请求(先执行，后判断)：GET、HEAD、POST。请求的header里面没有自定义头，Content-Type分为以下几种：text/plain	
 
-非简单请求：put、delete方法的ajax请求，发送json格式的ajax请求，带自定义头的ajax请求
+multipart/form-data   
+
+application/x-www-form-urlencoded
+
+非简单请求(先判断，后执行)：包括put、delete方法的ajax请求，发送json格式的ajax请求，带自定义头的ajax请求。先发送一个OPTIONS预检命令，服务器通过后，再发送请求。预检命令可以缓存好，这样在一段时间内就不需要再发送预检命令。
+
+## 4 带cookie的跨域请求
+
+带cookie的跨域，origin不能使用通配符，必须指定具体的url
+
+```java
+res.addHeader("Access-Control-Allow-Origin", "*")//这种写法是错误的
+```
+
+## 5 Spring框架解决方案
+
+使用@CrossOrigin注解，加在类上或者方法上都可以
+
+
+
+
 
 
 
