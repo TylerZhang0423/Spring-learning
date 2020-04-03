@@ -337,7 +337,23 @@ res.addHeader("Access-Control-Allow-Origin", "*")//这种写法是错误的
 
 
 
+# Tensorflow
 
+## 1 环境配置
+
+安装anaconda，用于进行包管理。
+
+在conda建立tensorflow环境，安装tensorflow包
+
+```shell
+conda create -n tensorflow python=3.7
+source activate tensorflow
+pip install tensorflow
+```
+
+注意：tensorflow安装在conda下，因此在pycharm中要选择装有tensorflow的解释器，而不是默认的python解释器。
+
+例如：~/opt/anaconda3/envs/tensorflow/bin/python
 
 
 
