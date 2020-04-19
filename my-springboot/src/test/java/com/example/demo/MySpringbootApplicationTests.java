@@ -1,7 +1,12 @@
 package com.example.demo;
 
 import com.example.demo.model.UserModel;
+import com.example.demo.model.UserMood;
+import com.example.demo.mq.UserMoodProducer;
+import com.example.demo.repository.UserMoodRepository;
+import com.example.demo.service.UserMoodService;
 import com.example.demo.service.UserService;
+import org.apache.activemq.command.ActiveMQQueue;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
@@ -17,11 +22,13 @@ import org.springframework.util.Assert;
 
 
 import javax.annotation.Resource;
+import javax.jms.Destination;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-
+import java.util.concurrent.Future;
 
 
 @SpringBootTest
@@ -160,6 +167,78 @@ class MySpringbootApplicationTests {
 	public void testMybatis() {
 		UserModel userModel = userService.findByNameAndPassword("tyler", "123456");
 		logger.info(userModel.getId()+userModel.getName());
+	}
+
+	@Resource
+	private UserMoodService userMoodService;
+
+	@Test
+	public void testUserMood() {
+		UserMood userMood = new UserMood();
+		userMood.setId("1");
+		userMood.setUserId("1");
+		userMood.setPraiseNum(0);
+		userMood.setContent("这是我的第一条微信说说！！！");
+		userMood.setPublishTime(new Date());
+		UserMood mood = userMoodService.save(userMood);
+	}
+
+	@Resource
+	private UserMoodProducer userMoodProducer;
+
+	@Test
+	public void testActiveMQ() {
+
+		Destination destination = new ActiveMQQueue("user.queue");
+		userMoodProducer.sendMessage(destination, "hello,mq!!!");
+
+	}
+
+	@Test
+	public void testActiveMQAsynSave() {
+		UserMood userMood = new UserMood();
+		userMood.setId("2");
+		userMood.setUserId("2");
+		userMood.setPraiseNum(0);
+		userMood.setContent("这是我的第一条微信说说！！！");
+		userMood.setPublishTime(new Date());
+		String msg = userMoodService.asynSave(userMood);
+		System.out.println("异步发表说说 :" + msg);
+
+	}
+
+	@Test
+	public void testAsync(){
+		long startTime = System.currentTimeMillis();
+		System.out.println("第一次查询所有用户！");
+		List<UserModel> userList = userService.findAll();
+		System.out.println("第二次查询所有用户！");
+		List<UserModel> userList2 = userService.findAll();
+		System.out.println("第三次查询所有用户！");
+		List<UserModel> userList3 = userService.findAll();
+		long endTime = System.currentTimeMillis();
+		System.out.println("总共消耗：" + (endTime - startTime) + "毫秒");
+
+	}
+
+	@Test
+	public void testAsync2()throws Exception{
+		long startTime = System.currentTimeMillis();
+		System.out.println("第一次查询所有用户！");
+		Future<List<UserModel>> userList = userService.findAsynAll();
+		System.out.println("第二次查询所有用户！");
+		Future<List<UserModel>> userList2 = userService.findAsynAll();
+		System.out.println("第三次查询所有用户！");
+		Future<List<UserModel>> userList3 = userService.findAsynAll();
+		while (true){
+			if(userList.isDone() && userList2.isDone() && userList3.isDone()){
+				break;
+			}else {
+				Thread.sleep(5);
+			}
+		}
+		long endTime = System.currentTimeMillis();
+		System.out.println("总共消耗：" + (endTime - startTime) + "毫秒");
 	}
 
 

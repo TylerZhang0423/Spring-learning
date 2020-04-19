@@ -9,12 +9,16 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.Future;
 
 //用户服务层实现类
 @Transactional
@@ -51,7 +55,17 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UserModel> findAll() {
-        return userRepository.findAll();
+        try{
+            System.out.println("开始做任务");
+            long start = System.currentTimeMillis();
+            List<UserModel> userList = userRepository.findAll();
+            long end = System.currentTimeMillis();
+            System.out.println("完成任务，耗时：" + (end - start) + "毫秒");
+            return userList;
+        }catch (Exception e){
+            logger.error("method [findAll] error",e);
+            return Collections.EMPTY_LIST;
+        }
     }
 
     @Transactional
@@ -100,6 +114,22 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserModel findByNameAndPassword(String name , String password) {
         return userDao.findByNameAndPassword(name, password);
+    }
+
+    @Override
+    @Async
+    public Future<List<UserModel>> findAsynAll() {
+        try{
+            System.out.println("开始做任务");
+            long start = System.currentTimeMillis();
+            List<UserModel> userList = userRepository.findAll();
+            long end = System.currentTimeMillis();
+            System.out.println("完成任务，耗时：" + (end - start) + "毫秒");
+            return new AsyncResult<List<UserModel>>(userList) ;
+        }catch (Exception e){
+            logger.error("method [findAll] error",e);
+            return new AsyncResult<List<UserModel>>(null);
+        }
     }
 
 }

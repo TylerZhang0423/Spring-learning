@@ -7,6 +7,7 @@ import org.springframework.data.domain.Pageable;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.Future;
 
 //用户服务层接口
 public interface UserService {
@@ -22,6 +23,9 @@ public interface UserService {
     List<UserModel> findByNameLike (String name);
     List<UserModel> findByIdIn (Collection<String> ids);
 
-    UserModel findByNameAndPassword(String name , String password);
+    UserModel findByNameAndPassword(String name, String password);
+
+
+    Future<List<UserModel>> findAsynAll();
 
 }
