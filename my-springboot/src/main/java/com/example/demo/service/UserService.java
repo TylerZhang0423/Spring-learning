@@ -28,4 +28,6 @@ public interface UserService {
 
     Future<List<UserModel>> findAsynAll();
 
+    UserModel findByNameAndPasswordRetry(String name , String password);
+
 }
