@@ -355,6 +355,10 @@ pip install tensorflow
 
 例如：~/opt/anaconda3/envs/tensorflow/bin/python
 
+# 持续集成
+
+
+
 
 
 
