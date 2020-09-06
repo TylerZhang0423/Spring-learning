@@ -19,17 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class App 
 {
 
-    @Autowired
-    private UserDOMapper userDOMapper;
-
-    @RequestMapping("/")
-    public String home() {
-        UserDO userDO = userDOMapper.selectByPrimaryKey(1);
-        return userDO.getName();
-    }
-
     public static void main( String[] args ) {
         SpringApplication.run(App.class, args);
-        System.out.println( "Hello World!" );
+        System.out.println( "The project started successfully!" );
     }
 }
