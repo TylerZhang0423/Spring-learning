@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 /**
  * @ Author     :tyler
@@ -23,10 +24,31 @@ import java.util.Map;
  */
 @Controller("user")
 @RequestMapping("/user")
+@CrossOrigin
 public class UserController extends BaseController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private HttpServletRequest httpServletRequest;
+
+    //用户获取otp短信的接口
+    @RequestMapping(value = "/getotp", method = {RequestMethod.POST}, consumes = {CONTENT_TYPE_FORMED})
+    @ResponseBody
+    public CommonReturnType getOtp(@RequestParam(name="telephone") String telephone) {
+        //需要按照一定规则生成otp验证码
+        Random random = new Random();
+        int randomInt = random.nextInt(99999);
+        randomInt += 10000;
+        String otpCode = String.valueOf(randomInt);
+
+        //将otp验证码同用户的手机号关联，使用http session的方式与手机绑定
+        httpServletRequest.getSession().setAttribute(telephone, otpCode);
+
+        System.out.println("telephone = " + telephone + "; otpCode = " + otpCode);
+        return CommonReturnType.create(null);
+    }
 
     @RequestMapping("/get")
     @ResponseBody
