@@ -1,5 +1,6 @@
 package com.tyler.service;
 
+import com.tyler.error.BusinessException;
 import com.tyler.service.model.UserModel;
 
 /**
@@ -10,4 +11,5 @@ import com.tyler.service.model.UserModel;
 public interface UserService {
 
     UserModel getUserById(Integer id);
+    void register(UserModel userModel) throws BusinessException;
 }

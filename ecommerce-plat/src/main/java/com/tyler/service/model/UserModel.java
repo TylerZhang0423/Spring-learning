@@ -3,6 +3,7 @@ package com.tyler.service.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @ Author     :tyler
@@ -11,6 +12,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@ToString
 public class UserModel {
     private Integer id;
     private String name;
