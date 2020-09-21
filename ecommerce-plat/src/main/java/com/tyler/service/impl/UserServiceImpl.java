@@ -8,6 +8,8 @@ import com.tyler.error.BusinessException;
 import com.tyler.error.EmBusinessError;
 import com.tyler.service.UserService;
 import com.tyler.service.model.UserModel;
+import com.tyler.validator.ValidationResult;
+import com.tyler.validator.ValidatorImpl;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,17 +31,19 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserPasswordDOMapper userPasswordDOMapper;
 
+    @Autowired
+    private ValidatorImpl validator;
+
     @Override
     @Transactional
     public void register(UserModel userModel) throws BusinessException {
         if (userModel == null) {
             throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR);
         }
-        if (StringUtils.isEmpty(userModel.getName())
-            ||StringUtils.isEmpty(userModel.getGender())
-            ||userModel.getAge() == null
-            ||StringUtils.isEmpty(userModel.getTelephone())) {
-            throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR);
+
+        ValidationResult result = validator.validate(userModel);
+        if (result.isHasErrors()) {
+            throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR, result.getErrMsg());
         }
 
         UserDO userDO = convertFromModel(userModel);

@@ -11,7 +11,7 @@
     <context id="DB2Tables" targetRuntime="MyBatis3">
         <!--数据库连接地址账号密码-->
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://127.0.0.1:3306/tradingData"
+                        connectionURL="jdbc:mysql://129.204.81.105:3307/tradingData"
                         userId="root"
                         password="Aptx4869">
         </jdbcConnection>
@@ -35,23 +35,23 @@
         <!--生成对应表及类名-->
         <!--domainObjectName映射成java类的对象-->
         <!-- false型的是不允许使用dataobject中的example进行复杂操作 -->
-        <table tableName="user_info" domainObjectName="UserDO" enableCountByExample="false"
+
+<!--        <table tableName="user_info" domainObjectName="UserDO" enableCountByExample="false"-->
+<!--        enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+<!--        selectByExampleQueryId="false" ></table>-->
+
+<!--        <table tableName="user_password" domainObjectName="UserPasswordDO" enableCountByExample="false"-->
+<!--        enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+<!--        selectByExampleQueryId="false" ></table>-->
+
+        <table tableName="item" domainObjectName="ItemDO" enableCountByExample="false"
         enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
         selectByExampleQueryId="false" ></table>
 
 
-        <table tableName="user_password" domainObjectName="UserPasswordDO" enableCountByExample="false"
+        <table tableName="item_stock" domainObjectName="ItemStockDO" enableCountByExample="false"
         enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
         selectByExampleQueryId="false" ></table>
-
-        <!--<table tableName="item" domainObjectName="ItemDO" enableCountByExample="false"-->
-        <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
-        <!--selectByExampleQueryId="false" ></table>-->
-
-
-        <!--<table tableName="item_stock" domainObjectName="ItemStockDO" enableCountByExample="false"-->
-        <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
-        <!--selectByExampleQueryId="false" ></table>-->
 
         <!--<table tableName="order_info" domainObjectName="OrderDO" enableCountByExample="false"-->
         <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
