@@ -2,6 +2,7 @@ package com.tyler.service.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 
@@ -12,6 +13,7 @@ import java.math.BigDecimal;
  */
 @Getter
 @Setter
+@ToString
 public class OrderModel {
     //String类型的交易号（订单号）
     //201812023349823723 一般可以以时间开头，后面每一位都有特殊含义

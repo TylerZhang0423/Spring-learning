@@ -1,5 +1,8 @@
 package com.tyler.dataobject;
 
+import lombok.ToString;
+
+@ToString
 public class OrderDO {
     /**
      *

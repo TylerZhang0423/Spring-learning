@@ -1,6 +1,7 @@
 package com.tyler.dao;
 
 import com.tyler.dataobject.ItemStockDO;
+import org.apache.ibatis.annotations.Param;
 
 public interface ItemStockDOMapper {
     /**
@@ -52,4 +53,6 @@ public interface ItemStockDOMapper {
      * @mbg.generated Sun Sep 20 16:40:59 CST 2020
      */
     int updateByPrimaryKey(ItemStockDO record);
+
+    int decreaseStock(@Param("itemId") Integer itemId, @Param("amount") Integer amount);
 }

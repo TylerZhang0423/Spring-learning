@@ -122,12 +122,21 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public boolean decreaseStcok(Integer itemId, Integer amount) throws BusinessException {
-        return false;
+    @Transactional
+    public boolean decreaseStock(Integer itemId, Integer amount) throws BusinessException {
+        int affectRow = itemStockDOMapper.decreaseStock(itemId, amount);
+        LOGGER.info("decrease stock success!");
+        if(affectRow>0){
+            //更新库存成功
+            return true;
+        }else{
+            return false;
+        }
     }
 
     @Override
+    @Transactional
     public void increaseSales(Integer itemId, Integer amount) throws BusinessException {
-
+        itemDOMapper.increaseSales(itemId, amount);
     }
 }
