@@ -1,6 +1,5 @@
 package com.tyler.controller;
 
-import com.tyler.App;
 import com.tyler.error.BusinessException;
 import com.tyler.error.EmBusinessError;
 import com.tyler.response.CommonReturnType;

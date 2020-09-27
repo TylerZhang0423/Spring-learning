@@ -1,6 +1,5 @@
 package com.tyler.service.impl;
 
-import com.tyler.App;
 import com.tyler.dao.OrderDOMapper;
 import com.tyler.dao.SequenceDOMapper;
 import com.tyler.dataobject.OrderDO;

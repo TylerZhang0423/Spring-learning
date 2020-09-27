@@ -7,7 +7,9 @@ import com.tyler.dataobject.ItemStockDO;
 import com.tyler.error.BusinessException;
 import com.tyler.error.EmBusinessError;
 import com.tyler.service.ItemService;
+import com.tyler.service.PromoService;
 import com.tyler.service.model.ItemModel;
+import com.tyler.service.model.PromoModel;
 import com.tyler.validator.ValidationResult;
 import com.tyler.validator.ValidatorImpl;
 import org.apache.log4j.Logger;
@@ -36,6 +38,9 @@ public class ItemServiceImpl implements ItemService {
 
     @Autowired
     private ItemStockDOMapper itemStockDOMapper;
+
+    @Autowired
+    private PromoService promoService;
 
     private static Logger LOGGER = Logger.getLogger(ItemServiceImpl.class);
 
@@ -103,6 +108,10 @@ public class ItemServiceImpl implements ItemService {
         }
         ItemStockDO itemStockDO = itemStockDOMapper.selectByItemId(id);
         ItemModel itemModel = this.convertFromDataObject(itemDO, itemStockDO);
+        PromoModel promoModel = promoService.getPromoByItemId(itemModel.getId());
+        if (promoModel!=null && promoModel.getStatus().intValue()!=3) {
+            itemModel.setPromoModel(promoModel);
+        }
 
         return itemModel;
     }
