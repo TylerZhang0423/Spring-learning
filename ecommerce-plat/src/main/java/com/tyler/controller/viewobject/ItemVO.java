@@ -2,6 +2,7 @@ package com.tyler.controller.viewobject;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 
@@ -12,6 +13,7 @@ import java.math.BigDecimal;
  */
 @Getter
 @Setter
+@ToString
 public class ItemVO {
     private Integer id;
 
@@ -37,5 +39,5 @@ public class ItemVO {
     private Integer promoId;
 
     //秒杀活动开始时间，进行倒计时展示等
-    private String startDate;
+    private String startTime;
 }

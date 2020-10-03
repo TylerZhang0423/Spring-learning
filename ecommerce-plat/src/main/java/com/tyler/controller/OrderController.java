@@ -49,7 +49,7 @@ public class OrderController extends BaseController {
         UserModel userModel = (UserModel) httpServletRequest.getSession().getAttribute("LOGIN_USER");
         LOGGER.info("userModel : " + userModel.toString());
 
-        orderService.createOrder(userModel.getId(), itemId, amount);
+        orderService.createOrder(userModel.getId(), itemId, promoId, amount);
 
         return CommonReturnType.create(null);
 

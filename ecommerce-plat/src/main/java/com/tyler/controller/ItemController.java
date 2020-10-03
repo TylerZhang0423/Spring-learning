@@ -5,6 +5,7 @@ import com.tyler.error.BusinessException;
 import com.tyler.response.CommonReturnType;
 import com.tyler.service.ItemService;
 import com.tyler.service.model.ItemModel;
+import org.joda.time.format.DateTimeFormat;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -82,10 +83,11 @@ public class ItemController extends BaseController {
             itemVO.setPromoStatus(itemModel.getPromoModel().getStatus());
             itemVO.setPromoId(itemModel.getPromoModel().getId());
             itemVO.setPromoPrice(itemModel.getPromoModel().getPromoItemPrice());
-            itemVO.setStartDate(itemModel.getPromoModel().getStartTime().toString());
+            itemVO.setStartTime(itemModel.getPromoModel().getStartTime().toString(DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss")));
         } else {
             itemVO.setPromoStatus(0);
         }
+        System.out.println(itemVO.toString());
         return itemVO;
     }
 

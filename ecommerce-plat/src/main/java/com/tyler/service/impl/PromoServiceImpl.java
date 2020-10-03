@@ -40,12 +40,15 @@ public class PromoServiceImpl implements PromoService {
         if(promoModel.getStartTime().isAfterNow()){
             //秒杀还未开始
             promoModel.setStatus(1);
+            System.out.println("status : " + promoModel.getStatus());
         }else if(promoModel.getEndTime().isBeforeNow()){
             //秒杀已经结束
             promoModel.setStatus(3);
+            System.out.println("status : " + promoModel.getStatus());
         }else{
             //秒杀正在进行
             promoModel.setStatus(2);
+            System.out.println("status : " + promoModel.getStatus());
         }
 
 

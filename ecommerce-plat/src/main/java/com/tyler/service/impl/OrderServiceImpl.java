@@ -48,7 +48,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     @Transactional
     //需要用户id，商品id，购买数量
-    public OrderModel createOrder(Integer userId, Integer itemId, Integer amount) throws BusinessException {
+    public OrderModel createOrder(Integer userId, Integer itemId, Integer promoId, Integer amount) throws BusinessException {
 
         //1.校验下单状态，下单的商品是否存在，用户是否合法，购买数量是否正确。
         //判断商品是否存在
@@ -67,6 +67,20 @@ public class OrderServiceImpl implements OrderService {
             throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR, "数量信息不正确");
         }
 
+        //校验活动信息，promoId不等于null
+        if(promoId!=null){
+            // 1校验对应活动是否存在这个适用商品
+            //看传过来的秒杀模型id是否和商品模型中聚合的秒杀模型的id一致（该商品有秒杀活动，会将秒杀模型聚合进商品Model）
+            if(promoId.intValue()!=itemModel.getPromoModel().getId()){
+                throw  new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR,"活动信息不正确");
+
+                //即使id是秒杀模型的id，也不保险，还要校验是不是正在进行的秒杀
+            }else if(itemModel.getPromoModel().getStatus()!=2){
+                throw  new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR,"秒杀不在进行中");
+            }
+
+        }
+
         //2.落单减库存，支付减库存。
         //采用落单减库存，itemService中提供一个减库存的方法
         boolean result = itemService.decreaseStock(itemId, amount);
@@ -81,7 +95,14 @@ public class OrderServiceImpl implements OrderService {
         orderModel.setUserId(userId);
         orderModel.setItemId(itemId);
         orderModel.setAmount(amount);
-        orderModel.setItemPrice(itemModel.getPrice());
+        //如果有秒杀，下单价格是秒杀价格
+        if(promoId!=null){
+            orderModel.setItemPrice(itemModel.getPromoModel().getPromoItemPrice());
+        }else{
+            //否则就是平销价格
+            orderModel.setItemPrice(itemModel.getPrice());
+        }
+        orderModel.setPromoId(promoId);
         orderModel.setOrderPrice(orderModel.getItemPrice().multiply(new BigDecimal(amount)));
         //生成交易流水号（订单号）
         orderModel.setId(generateOrderNo());

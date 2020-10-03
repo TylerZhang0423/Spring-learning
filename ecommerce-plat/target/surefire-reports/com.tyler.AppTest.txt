@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: org.tyler.AppTest
+Test set: com.tyler.AppTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 s - in org.tyler.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 s - in com.tyler.AppTest
