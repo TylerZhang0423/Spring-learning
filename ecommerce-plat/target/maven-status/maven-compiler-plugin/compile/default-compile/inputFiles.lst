@@ -1,4 +1,5 @@
 /Users/tyler/Desktop/Spring-learning/ecommerce-plat/src/main/java/com/tyler/controller/viewobject/ItemVO.java
+/Users/tyler/Desktop/Spring-learning/ecommerce-plat/src/main/java/com/tyler/config/WebServerConfiguration.java
 /Users/tyler/Desktop/Spring-learning/ecommerce-plat/src/main/java/com/tyler/dataobject/ItemDO.java
 /Users/tyler/Desktop/Spring-learning/ecommerce-plat/src/main/java/com/tyler/service/PromoService.java
 /Users/tyler/Desktop/Spring-learning/ecommerce-plat/src/main/java/com/tyler/service/model/OrderModel.java

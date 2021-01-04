@@ -13,6 +13,7 @@ com/tyler/dao/PromoDOMapper.class
 com/tyler/service/PromoService.class
 com/tyler/controller/OrderController.class
 com/tyler/validator/ValidationResult.class
+com/tyler/config/WebServerConfiguration.class
 com/tyler/dataobject/ItemDO.class
 com/tyler/dataobject/UserDO.class
 com/tyler/response/CommonReturnType.class
